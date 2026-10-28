@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F5EE"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:paddingBottom="100dp">
+
+        <!-- Título principal de la matriz -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Decide qué merece tu atención."
+            android:textColor="#1E1E1E"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <!-- Subtítulo descriptivo -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Ordena tus tareas según su urgencia e importancia para avanzar con más claridad."
+            android:textColor="#756D67"
+            android:textSize="14sp" />
+
+        <!-- Matriz de 4 Cuadrantes -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:columnCount="2"
+            android:rowCount="2">
+
+            <!-- Cuadrante 01: Hazlo Ahora (Urgente e Importante) -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="220dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/tag01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="01   HAZLO AHORA"
+                        android:textColor="#C06449"
+                        android:textSize="10sp"
+                        android:letterSpacing="0.05"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tag01"
+                        android:layout_marginTop="12dp"
+                        android:text="Urgente e\nImportante"
+                        android:textColor="#1E1E1E"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Escribe una tarea..."
+                            android:textColor="#A09890"
+                            android:textSize="11sp" />
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_alignParentEnd="true"
+                            android:background="@drawable/bg_black_circle"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_add_white" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Cuadrante 02: Planifica (No Urgente e Importante) -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="220dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                app:cardBackgroundColor="#EAF0EC"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/tag02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="02   PLANIFICA"
+                        android:textColor="#C06449"
+                        android:textSize="10sp"
+                        android:letterSpacing="0.05"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tag02"
+                        android:layout_marginTop="12dp"
+                        android:text="No Urgente\ne\nImportante"
+                        android:textColor="#1E1E1E"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Escribe una tarea..."
+                            android:textColor="#A09890"
+                            android:textSize="11sp" />
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_alignParentEnd="true"
+                            android:background="@drawable/bg_black_circle"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_add_white" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Cuadrante 03: Delega (Urgente y No Importante) -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="220dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                app:cardBackgroundColor="#F3ECE4"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/tag03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="03   DELEGA"
+                        android:textColor="#C06449"
+                        android:textSize="10sp"
+                        android:letterSpacing="0.05"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tag03"
+                        android:layout_marginTop="12dp"
+                        android:text="Urgente y\nNo\nImportante"
+                        android:textColor="#1E1E1E"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Escribe una tarea..."
+                            android:textColor="#A09890"
+                            android:textSize="11sp" />
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_alignParentEnd="true"
+                            android:background="@drawable/bg_black_circle"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_add_white" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Cuadrante 04: Considera Eliminar (No Urgente y No Importante) -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="220dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                app:cardBackgroundColor="#EAEBE8"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/tag04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="04   CONSIDERA ELIMINAR"
+                        android:textColor="#C06449"
+                        android:textSize="9sp"
+                        android:letterSpacing="0.03"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tag04"
+                        android:layout_marginTop="12dp"
+                        android:text="No Urgente\ny No\nImportante"
+                        android:textColor="#1E1E1E"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Escribe una tarea..."
+                            android:textColor="#A09890"
+                            android:textSize="11sp" />
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_alignParentEnd="true"
+                            android:background="@drawable/bg_black_circle"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_add_white" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </GridLayout>
+
+    </LinearLayout>
+</ScrollView>
